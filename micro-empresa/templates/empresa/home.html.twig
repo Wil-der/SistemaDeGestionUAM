@@ -1,0 +1,180 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block body %}
+  <div id="home">
+    <section class="portada">
+      <img src="{{ asset('img/portada.jpg') }}" alt="portada" width="100%" height="100%" />
+    </section>
+
+    <section class="container-mision">
+      <div class="container-img-left" data-aos="fade-right">
+        <img src="{{ asset('img/mision.jpeg') }}" class="zoom-img" alt="mision" width="100%" height="100%" />
+      </div>
+      <div class="container-text-left" data-aos="fade-up" data-aos-delay="500">
+        <div class="titulo">Mision</div>
+        <p class="text">AnteriorSiguiente Fundada en 1990, la UAM, ha contribuido a mantener la capacidad combativa de las FAR. Se enfoca en orientar su gestión a la elevación constante de la calidad de vida de los miembros de las FAR en el orden alimentario, al incremento sostenido de las ventas y a dar respuesta oportuna a otras demandas puntuales autorizadas, mediante la producción eficiente de una amplia y variada gama de productos agropecuarios e industriales competitivos.</p>
+      </div>
+    </section>
+
+    <section class="container-vision" id="section-2">
+      <div class="container-img-right" data-aos="fade-left">
+        <img src="{{ asset('img/vision.jpeg') }}" class="zoom-img" alt="mision" width="100%" height="100%" />
+      </div>
+      <div class="container-text-right" data-aos="fade-down" data-aos-delay="500">
+        <div class="titulo">Vision</div>
+        <p class="text">AnteriorSiguiente Fundada en 1990, la UAM, ha contribuido a mantener la capacidad combativa de las FAR. Se enfoca en orientar su gestión a la elevación constante de la calidad de vida de los miembros de las FAR en el orden alimentario, al incremento sostenido de las ventas y a dar respuesta oportuna a otras demandas puntuales autorizadas, mediante la producción eficiente de una amplia y variada gama de productos agropecuarios e industriales competitivos.</p>
+      </div>
+    </section>
+
+    <section class="container-card">
+      <article class="card" data-aos="flip-left" data-aos-delay="300" data-aos-easing="linear" data-aos-duration="1000">
+        <div class="card-img">
+          <div class="card-imgs pv delete"></div>
+        </div>
+
+        <div class="project-info">
+          <div class="flex">
+            <div class="project-title">Tomate</div>
+          </div>
+          <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae voluptas ullam aut incidunt minima.</span>
+        </div>
+      </article>
+
+      <article class="card" data-aos="flip-left" data-aos-delay="400" data-aos-easing="linear" data-aos-duration="1000">
+        <div class="card-img">
+          <div class="card-imgs pv delete"></div>
+        </div>
+
+        <div class="project-info">
+          <div class="flex">
+            <div class="project-title">Campana Frio</div>
+          </div>
+          <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae voluptas ullam aut incidunt minima.</span>
+        </div>
+      </article>
+
+      <article class="card" data-aos="flip-left" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="1000">
+        <div class="card-img">
+          <div class="card-imgs pv delete"></div>
+        </div>
+
+        <div class="project-info">
+          <div class="flex">
+            <div class="project-title">Carne de Cerdo</div>
+          </div>
+          <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae voluptas ullam aut incidunt minima.</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="container-mision">
+      <div class="carousel">
+  <div class="carousel-container">
+    <div class="slide"><img src="{{ asset('img/portada.jpg') }}" alt="Imagen 1"></div>
+    <div class="slide"><img src="{{ asset('img/descarga.jpeg') }}" alt="Imagen 2"></div>
+    <div class="slide"><img src="{{ asset('img/descarga (1).jpeg') }}" alt="Imagen 3"></div>
+    <div class="slide"><img src="{{ asset('img/descarga (2).jpeg') }}" alt="Imagen 4"></div>
+    <div class="slide"><img src="{{ asset('img/descarga (3).jpeg') }}" alt="Imagen 5"></div>
+  </div>
+
+  <!-- Botones de navegación -->
+  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+  <!-- Indicadores (dots) -->
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+</div>
+
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Sección: Sobre Nosotros -->
+      <div class="footer-section about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una organización comprometida con la calidad y la excelencia en nuestros servicios.</p>
+      </div>
+
+      <!-- Sección: Enlaces Útiles -->
+      <div class="footer-section links">
+        <h2>Enlaces Útiles</h2>
+        <ul>
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#">Empresas</a>
+          </li>
+          <li>
+            <a href="#">reporte diario</a>
+          </li>
+          <li>
+            <a href="#">no se :)</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sección: Contacto -->
+      <div class="footer-section contact">
+        <h2>Contacto</h2>
+        <p>
+          <i class="fas fa-phone"></i> +53 123 456 789
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i> correo@empresa.com
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Empresa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script>
+  let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    document.querySelector(".carousel-container").style.transform = `translateX(${offset}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
+}
+
+function moveSlide(step) {
+    currentIndex += step;
+    if (currentIndex < 0) currentIndex = slides.length - 1;
+    if (currentIndex >= slides.length) currentIndex = 0;
+    updateCarousel();
+}
+
+function currentSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+}
+
+// Cambio automático cada 4 segundos
+setInterval(() => moveSlide(1), 4000);
+
+updateCarousel();
+
+  </script>
+{% endblock %}

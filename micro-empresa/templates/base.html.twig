@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% block title %}
+        Mi Sitio
+      {% endblock %}
+    </title>
+    <link rel="shortcut icon" href="{{ asset('img/favicon.xcf') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/global.css') }}" />
+    <link rel="stylesheet" href="{{ asset('aos-master/dist/aos.css') }}" /> 
+    {% block stylesheets %}
+    {% endblock %}
+  </head>
+  <body>
+    {% include 'navbar.html.twig' %}
+    {% block body %}
+    {% endblock %}
+    <script src="{{ asset('aos-master/dist/aos.js') }}"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        AOS.init()
+      })
+    </script>
+  </body>
+</html>

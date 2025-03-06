@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgb(255, 255, 255); */
+    height: 100dvh;
+    width: 100dvw;
+    overflow-x: hidden;
+}
+
+#home {
+    width: 100dvw;
+    background: linear-gradient(to bottom, white, #0475A8);    
+}
+
+.portada {
+    height: 100dvh;
+    width: 100%;
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    height: 100dvh;
+    width: 100%;
+    position: relative;
+}
+
+.container-img-left {
+    height: 500px;
+    width: 400px;
+    background-color: #8da30f;
+    position: absolute;
+    top: 15%;
+    left: 17%;
+    border-radius: 10px;
+
+}
+
+.container-text-left {
+    height: 400px;
+    width: 600px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 22%;
+    left: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.text {
+    font-size: 25px;
+    color: black;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 10px 20px 10px 20px;
+    position: absolute;
+    top: 2%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(235, 109, 109);
+    border-radius: 10px;
+}
+
+.container-img-right {
+    height: 500px;
+    width: 400px;
+    background-color: #8da30f;
+    position: absolute;
+    top: 15%;
+    right: 17%;
+    border-radius: 10px;
+}
+
+.container-text-right {
+    height: 400px;
+    width: 600px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 22%;
+    right: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.project-info {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: -50px;
+  }
+  
+  .project-title {
+    font-weight: 500;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+  }
+  
+  .lighter {
+    font-size: 0.9em;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tag {
+    font-weight: lighter;
+    color: grey;
+  }
+  
+  /*DELETE THIS TWO LINE*/
+  .delete {
+    background-color: #b2b2fd;
+  }
+  
+  .card-img div {
+    width: 90%;
+  }
+  /*IF USING IMAGES*/
+  
+  .card {
+    background-color: white;
+    color: black;
+    width: 300px;
+    max-height: 330px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  .card-img {
+    position: relative;
+    top: -20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Change the .card-img div to .card-img img to use img*/
+  .card-img a,
+  .card-img div {
+    height: 150px;
+    width: 90%;
+    /* Change this width here to change the width of the color/image */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  .card-imgs {
+    transition: all 0.5s;
+  }
+
+  .container-card {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background: #0475A8;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffcc00;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 1px solid white;
+    font-size: 14px;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 500px;
+
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicadores (dots) */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background-color: #0475A8;
+}
+
+.zoom-img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.zoom-img:hover {
+    transform: scale(1.2);
+}
