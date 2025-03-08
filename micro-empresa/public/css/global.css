@@ -1,35 +1,61 @@
+@font-face {
+    font-family: 'FuenteElegante';
+    src: url('../font/alex-brush/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
+    /* font-family: 'FuenteElegante', inherit; */
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     /* background-color: rgb(255, 255, 255); */
     height: 100dvh;
     width: 100dvw;
-    overflow-x: hidden;
+    overflow-x: hidden;    
+}
+
+#fondo{
+    height: 100dvh;
+    width: 100dvw;
+    background-image: url("../img/portada.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
 }
 
 #home {
     width: 100dvw;
-    background: linear-gradient(to bottom, white, #0475A8);    
+    /* background: linear-gradient(to bottom, white, #0475A8);     */
+    /* background-color: #f2f2f2; */
 }
+
 
 .portada {
     height: 100dvh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.portada img {
-    width: 100%;
-    height: 100%;
+.portada h1 {
+    font-family: 'FuenteElegante', monospace;
+    font-size: 100px;
+    color: black;
 }
 
 section {
     height: 100dvh;
     width: 100%;
     position: relative;
+    background-color: #f2f2f2;
+
 }
 
 .container-img-left {
@@ -46,7 +72,7 @@ section {
 .container-text-left {
     height: 400px;
     width: 600px;
-    background-color: aliceblue;
+    background-color: #FFFFFF;
     position: absolute;
     top: 22%;
     left: 42%;
@@ -72,7 +98,7 @@ section {
     top: 2%;
     left: 80%;
     transform: translate(-50%, -50%);
-    background-color: rgb(235, 109, 109);
+    background-color: #F0F8FF;
     border-radius: 10px;
 }
 
@@ -89,7 +115,7 @@ section {
 .container-text-right {
     height: 400px;
     width: 600px;
-    background-color: aliceblue;
+    background-color: #FFFFFF;
     position: absolute;
     top: 22%;
     right: 42%;
@@ -160,6 +186,13 @@ section {
     display: flex;
     justify-content: center;
   }
+
+  .card-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
   
   /* Change the .card-img div to .card-img img to use img*/
   .card-img a,
@@ -185,6 +218,8 @@ section {
 }
 
 .footer {
+    position: relative;
+    z-index: 2;
     background: #0475A8;
     color: white;
     padding: 40px 0;
@@ -293,7 +328,6 @@ section {
     height: 100%;
     width: 100%;
     display: block;
-    border-radius: 10px;
 }
 
 /* Botones de navegación */
@@ -347,3 +381,5 @@ section {
 .zoom-img:hover {
     transform: scale(1.2);
 }
+
+
