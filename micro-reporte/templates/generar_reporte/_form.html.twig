@@ -1,0 +1,133 @@
+<div class="form-container">
+<div class="form-div">
+    <div class="botonera">
+        <button type="button" class="btn-reporte" id="btn-hechos-extraordinarios">
+             <img src="{{ asset('img/police.svg') }}" alt="icon">
+             <div>Hechos Extraordinarios</div>
+            </button>
+        <button type="button" class="btn-reporte" id="btn-produccion-huevos">
+            <img src="{{ asset('img/bird-in-broken.svg') }}" alt="icon">
+            <div>Producción de Huevos</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-pienso">
+            <img src="{{ asset('img/pig-svgrepo-com.svg') }}" alt="icon"> ↓ 
+            <div>Produccion de Pienso</div></button>
+        <button type="button" class="btn-reporte" id="btn-campana-1">
+            <img src="{{ asset('img/sprout-svgrepo-com.svg') }}" alt="icon">
+            <div>Campaña 1</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-campana-2">
+            <img src="{{ asset('img/sprout-svgrepo-com (1).svg') }}" alt="icon">
+            <div>Campaña 2</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-peces">
+            <img src="{{ asset('img/fish-svgrepo-com.svg') }}" alt="icon">
+            <div>Produccion de Peces</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-combustible">
+            <img src="{{ asset('img/oil-container-svgrepo-com.svg') }}" alt="icon">
+            <div>Combustible</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-nacimientos">
+            <img src="{{ asset('img/lamb-svgrepo-com.svg') }}" alt="icon">
+            <div>Nacimientos</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-mortalidad">
+            <img src="{{ asset('img/chop-svgrepo-com.svg') }}" alt="icon">
+            <div>Mortalidad</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-maquina-ingeniera">
+            <img src="{{ asset('img/tractor-svgrepo-com.svg') }}" alt="icon">
+            <div>Máquina Ingeniera</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-equipo-riego">
+            <img src="{{ asset('img/watering-svgrepo-com.svg') }}" alt="icon">
+            <div>Equipo Riego</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-contenedores">
+            <img src="{{ asset('img/container-svgrepo-com.svg') }}" alt="icon">
+            <div>Contenedores</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-extraccion-combustible">
+            <img src="{{ asset('img/oil-svgrepo-com.svg') }}" alt="icon">
+            <div>Extracción de Combustible</div>
+        </button>
+        <button type="button" class="btn-reporte" id="btn-transportacion">
+            <img src="{{ asset('img/bus-svgrepo-com.svg') }}" alt="icon">
+            <div>Transportación</div>
+        </button>
+    </div>
+
+    <div class="reporte-container">
+        {{ form_start(form, {'attr': {'class': 'form'}}) }}
+
+        <!-- Campo Fecha -->
+        <div  id="fecha" class="input">
+            {{ form_widget(form.fecha, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <!-- Secciones del Formulario -->
+        <div id="hechosExtraordinarios" class="form-group">
+            {{ form_widget(form.hechosExtraordinarios, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="produccionHuevos" class="form-group" >
+            {{ form_widget(form.produccionHuevos, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="pienso" class="form-group">
+            {{ form_widget(form.pienso, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="campana1" class="form-group">
+            {{ form_widget(form.campana1, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="campana2" class="form-group">
+            {{ form_widget(form.campana2, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="peces" class="form-group">
+            {{ form_widget(form.peces, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="combustible" class="form-group">
+            {{ form_widget(form.combustible, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="nacimientos" class="form-group">
+            {{ form_widget(form.nacimientos, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="mortalidad" class="form-group">
+            {{ form_widget(form.mortalidad, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="maquinaIngeniera" class="form-group">
+            {{ form_widget(form.maquinaIngeniera, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="equipoRiego" class="form-group">
+            {{ form_widget(form.equipoRiego, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="contenedores" class="form-group">
+            {{ form_widget(form.contenedores, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="transportacion" class="form-group">
+            {{ form_widget(form.transportacion, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <div id="extraccionCombustible" class="form-group">
+            {{ form_widget(form.extraccionCombustible, {'attr': {'class': 'input'}}) }}
+        </div>
+
+        <!-- Botón de Guardar -->
+        <button class="form-btn">{{ button_label|default('Guardar') }}</button>
+        <button type="button" class="form-btn" id="btn-cancelar">Cancelar</button>
+
+        {{ form_end(form) }}
+    </div>
+</div>
+</div>

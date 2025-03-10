@@ -14,9 +14,6 @@ class Nacimientos
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $fecha = null;
-
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $observaciones = null;
 
@@ -59,18 +56,6 @@ class Nacimientos
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getFecha(): ?\DateTimeInterface
-    {
-        return $this->fecha;
-    }
-
-    public function setFecha(\DateTimeInterface $fecha): static
-    {
-        $this->fecha = $fecha;
-
-        return $this;
     }
 
     public function getObservaciones(): ?string

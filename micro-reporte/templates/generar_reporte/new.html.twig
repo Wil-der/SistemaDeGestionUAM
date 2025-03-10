@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New reporte{% endblock %}
+
+{% block body %}
+
+{{ include('generar_reporte/_form.html.twig') }}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const divs = document.querySelectorAll('.form-group');
+    const buttons = document.querySelectorAll('.btn-reporte');
+    
+    let divVisible = divs[0]; // El segundo div es el visible inicialmente
+    let buttonActive = buttons[0]; // El primer botón será el activo inicialmente
+    // Ocultar todos los divs excepto el segundo
+    divs.forEach((div, index) => {
+        div.style.display = index === 0 ? 'flex' : 'none';
+    });
+
+    // Aplicar fondo negro al primer botón activo
+    buttonActive.style.textDecoration = 'underline';
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Ocultar el div visible
+            if (divVisible) {
+                divVisible.style.display = 'none';
+            }
+
+            // Restaurar el estilo del botón previamente activo
+            if (buttonActive) {
+                buttonActive.style.textDecoration = '';
+            }
+
+            // Transformar el id del botón para obtener el id del div
+            const idDiv = button.id.replace('btn-', '').replace(/-(.)/g, (_, char) => char.toUpperCase());
+            const divToShow = document.getElementById(idDiv);
+
+            // Mostrar el nuevo div y actualizar la referencia
+            if (divToShow) {
+                divToShow.style.display = 'flex';
+                divVisible = divToShow;
+            }
+
+            // Aplicar fondo negro al nuevo botón seleccionado
+            button.style.textDecoration = 'underline';
+            buttonActive = button;
+        });
+    });
+});
+
+
+</script>
+
+{% endblock %}
